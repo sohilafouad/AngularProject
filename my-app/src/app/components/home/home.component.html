@@ -1,0 +1,38 @@
+<div class="container">
+    <h2 class="text-center">PROUDCTS </h2>
+    <div class="row">
+      <div class="col-md-6">
+        <img [src]="imageUrl" alt="Product Image" class="card-img-top"  [class]="show == true ? 'visible' : 'hidden'">
+        <div class="pro">
+            <button class="btn btn-dark mb-2">Enable</button><br>
+            <button  [disabled]="isBtnDisabled" class="btn btn-danger mb-2">Disable</button>
+            <button class="btn btn-info mx-3 my-2" (click)="handeltoggelImG()">
+              {{ show ? "Hide Imag" : "Show Imag" }}
+            </button>
+           
+              </div>
+        </div>
+          <!-- <div class="col-md-6">
+          <img [src]="imageUrl" alt="Product Image" class="card-img-top">
+          <div class="pro">
+            <button class="btn btn-dark mb-2">Enable</button><br>
+            <button  [disabled]="isBtnDisabled" class="btn btn-danger mb-2">Disable</button>
+            <button class="btn btn-info mx-3 my-2" (click)="handeltoggelImG()">
+              {{ show ? "Hide Imag" : "Show Imag" }}
+            </button>
+              </div>
+          </div> -->
+        </div>
+        </div>
+     
+
+        <input class="form-control mt-2" placeholder="Search" [(ngModel)]="searchText" />
+
+        <app-products [filterValue]="searchText"></app-products>
+      
+     
+    
+      
+   
+      
+    
